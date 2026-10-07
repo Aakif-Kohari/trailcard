@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Example Ridge Loop - TrailCard</title>
+  <style>
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      font-size: 11pt;
+      line-height: 1.35;
+      margin: 0;
+      padding: 8px;
+      background: #fff;
+    }
+    .card { max-width: 190mm; margin: 0 auto; border: 2px solid #111; padding: 7mm; }
+    h1 { font-size: 20pt; margin: 0 0 1mm; }
+    .meta { margin: 0 0 3mm; color: #333; font-size: 10pt; }
+    h2 {
+      font-size: 11.5pt; margin: 4mm 0 1.5mm; text-transform: uppercase;
+      letter-spacing: .03em; border-bottom: 1px solid #333; padding-bottom: .8mm;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 2mm 0 1mm; }
+    th, td { border: 1px solid #333; padding: 1.2mm 2mm; text-align: left; font-size: 10pt; }
+    th { width: 34%; background: #eee; font-weight: 600; }
+    td.key { font-weight: 700; }
+    ul { margin: 0; padding-left: 5mm; }
+    li { margin: .6mm 0; }
+    .warning {
+      border: 1px solid #856404; background: #fff3cd; padding: 1.5mm 2.5mm;
+      margin: 0 0 2.5mm; font-size: 10pt;
+    }
+    .alert { border-color: #842029; background: #f8d7da; }
+    .foot { margin-top: 4mm; font-size: 8.5pt; color: #444; border-top: 1px solid #999; padding-top: 1.5mm; }
+    .no-print { margin: 0 0 3mm; padding: 2mm 4mm; cursor: pointer; }
+    @media print {
+      body { padding: 0; }
+      .no-print { display: none; }
+      .card { border: none; padding: 0; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <button class="no-print" onclick="window.print()">Print / save as PDF</button>
+
+    <h1>Example Ridge Loop</h1>
+    <p class="meta">
+      2026-10-10 &middot; loop &middot; group of 2
+      &middot; all times local (UTC-7)
+    </p>
+
+
+
+    <table>
+      <tr><th>Distance / climb</th><td>4.22 km / 449 m</td></tr>
+      <tr><th>Walking + breaks</th><td>1.59 h + 30 min</td></tr>
+      <tr><th>Start</th><td class="key">08:00</td></tr>
+      <tr><th>Turn back if not at halfway by</th><td class="key">16:24</td></tr>
+      <tr><th>Planned finish</th><td>10:05 (aim to be done by 17:27)</td></tr>
+      <tr><th>Sunrise / sunset</th><td>07:18 / <strong>18:27</strong></td></tr>
+      <tr><th>Latest safe start</th><td>15:22</td></tr>
+      <tr><th>Water</th><td>1.5 L per person (3 L total)</td></tr>
+      <tr><th>Location</th><td>47.5, -121.7</td></tr>
+      <tr><th>Emergency number</th><td>112</td></tr>
+    </table>
+
+
+
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Example Ridge Loop on 2026-10-10 (loop), group of 2.</li><li>4.22 km with 449 m of climbing.</li><li>About 1.59 h of walking plus 30 min of breaks.</li>
+      </ul>
+
+      <h2>Timeline</h2>
+      <ul>
+        <li>Start 08:00, sunrise 07:18, sunset 18:27 (UTC-7).</li><li>Planned halfway point: 09:02.</li><li>Planned finish: 10:05. Aim to be done by 17:27.</li><li>Latest safe start for this route: 15:22.</li>
+      </ul>
+
+      <h2>Pack list</h2>
+      <ul>
+        <li>Water: 1.5 L per person (3 L for the group).</li><li>Food for the whole trip plus a little extra.</li><li>Warm and rain layers, headlamp, first-aid kit, whistle.</li><li>Offline map or GPX track, and a charged phone or power bank.</li>
+      </ul>
+
+      <h2>Turnaround rule</h2>
+      <ul>
+        <li>If you have not reached the halfway point by 16:24, turn back or shorten the route.</li><li>Turn back earlier if anyone is struggling or the weather changes.</li><li>Daylight does not wait: do not trade safety for the summit.</li>
+      </ul>
+
+      <h2>If you get lost</h2>
+      <ul>
+        <li>Stop, stay calm, and do not wander further off the path.</li><li>Your planned location: 47.5, -121.7.</li><li>Emergency number: 112. Call early and keep your battery for it.</li>
+      </ul>
+
+      <h2>Leave No Trace</h2>
+      <ul>
+        <li>Pack out all rubbish, including food scraps.</li><li>Stay on the trail and keep a respectful distance from wildlife.</li><li>Leave plants, rocks and cultural features as you found them.</li>
+      </ul>
+
+
+    <p class="foot">
+      The numbers above are calculated on this device (Naismith's rule, one-hour daylight buffer).
+      Advice text from the built-in template (no AI model used).
+      Advisory only: check conditions, carry navigation and use your judgment.
+    </p>
+  </div>
+</body>
+</html>
