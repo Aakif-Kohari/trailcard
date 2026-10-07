@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="TrailCard example" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata><name>Example Ridge Loop (synthetic)</name></metadata>
+  <trk><name>Example Ridge Loop</name><trkseg>
+    <trkpt lat="47.500000" lon="-121.700000"><ele>300.0</ele></trkpt>
+    <trkpt lat="47.500939" lon="-121.699889"><ele>335.3</ele></trkpt>
+    <trkpt lat="47.501854" lon="-121.699560"><ele>370.4</ele></trkpt>
+    <trkpt lat="47.502724" lon="-121.699019"><ele>405.1</ele></trkpt>
+    <trkpt lat="47.503527" lon="-121.698281"><ele>439.1</ele></trkpt>
+    <trkpt lat="47.504243" lon="-121.697364"><ele>472.2</ele></trkpt>
+    <trkpt lat="47.504854" lon="-121.696290"><ele>504.3</ele></trkpt>
+    <trkpt lat="47.505346" lon="-121.695086"><ele>535.1</ele></trkpt>
+    <trkpt lat="47.505706" lon="-121.693781"><ele>564.5</ele></trkpt>
+    <trkpt lat="47.505926" lon="-121.692408"><ele>592.3</ele></trkpt>
+    <trkpt lat="47.506000" lon="-121.691000"><ele>618.2</ele></trkpt>
+    <trkpt lat="47.505926" lon="-121.689592"><ele>642.2</ele></trkpt>
+    <trkpt lat="47.505706" lon="-121.688219"><ele>664.1</ele></trkpt>
+    <trkpt lat="47.505346" lon="-121.686914"><ele>683.7</ele></trkpt>
+    <trkpt lat="47.504854" lon="-121.685710"><ele>701.0</ele></trkpt>
+    <trkpt lat="47.504243" lon="-121.684636"><ele>715.7</ele></trkpt>
+    <trkpt lat="47.503527" lon="-121.683719"><ele>728.0</ele></trkpt>
+    <trkpt lat="47.502724" lon="-121.682981"><ele>737.6</ele></trkpt>
+    <trkpt lat="47.501854" lon="-121.682440"><ele>744.5</ele></trkpt>
+    <trkpt lat="47.500939" lon="-121.682111"><ele>748.6</ele></trkpt>
+    <trkpt lat="47.500000" lon="-121.682000"><ele>750.0</ele></trkpt>
+    <trkpt lat="47.499061" lon="-121.682111"><ele>748.6</ele></trkpt>
+    <trkpt lat="47.498146" lon="-121.682440"><ele>744.5</ele></trkpt>
+    <trkpt lat="47.497276" lon="-121.682981"><ele>737.6</ele></trkpt>
+    <trkpt lat="47.496473" lon="-121.683719"><ele>728.0</ele></trkpt>
+    <trkpt lat="47.495757" lon="-121.684636"><ele>715.7</ele></trkpt>
+    <trkpt lat="47.495146" lon="-121.685710"><ele>701.0</ele></trkpt>
+    <trkpt lat="47.494654" lon="-121.686914"><ele>683.7</ele></trkpt>
+    <trkpt lat="47.494294" lon="-121.688219"><ele>664.1</ele></trkpt>
+    <trkpt lat="47.494074" lon="-121.689592"><ele>642.2</ele></trkpt>
+    <trkpt lat="47.494000" lon="-121.691000"><ele>618.2</ele></trkpt>
+    <trkpt lat="47.494074" lon="-121.692408"><ele>592.3</ele></trkpt>
+    <trkpt lat="47.494294" lon="-121.693781"><ele>564.5</ele></trkpt>
+    <trkpt lat="47.494654" lon="-121.695086"><ele>535.1</ele></trkpt>
+    <trkpt lat="47.495146" lon="-121.696290"><ele>504.3</ele></trkpt>
+    <trkpt lat="47.495757" lon="-121.697364"><ele>472.2</ele></trkpt>
+    <trkpt lat="47.496473" lon="-121.698281"><ele>439.1</ele></trkpt>
+    <trkpt lat="47.497276" lon="-121.699019"><ele>405.1</ele></trkpt>
+    <trkpt lat="47.498146" lon="-121.699560"><ele>370.4</ele></trkpt>
+    <trkpt lat="47.499061" lon="-121.699889"><ele>335.3</ele></trkpt>
+    <trkpt lat="47.500000" lon="-121.700000"><ele>300.0</ele></trkpt>
+  </trkseg></trk>
+</gpx>
