@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ plan.trail_name }} - TrailCard</title>
+  <style>
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      font-size: 11pt;
+      line-height: 1.35;
+      margin: 0;
+      padding: 8px;
+      background: #fff;
+    }
+    .card { max-width: 190mm; margin: 0 auto; border: 2px solid #111; padding: 7mm; }
+    h1 { font-size: 20pt; margin: 0 0 1mm; }
+    .meta { margin: 0 0 3mm; color: #333; font-size: 10pt; }
+    h2 {
+      font-size: 11.5pt; margin: 4mm 0 1.5mm; text-transform: uppercase;
+      letter-spacing: .03em; border-bottom: 1px solid #333; padding-bottom: .8mm;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 2mm 0 1mm; }
+    th, td { border: 1px solid #333; padding: 1.2mm 2mm; text-align: left; font-size: 10pt; }
+    th { width: 34%; background: #eee; font-weight: 600; }
+    td.key { font-weight: 700; }
+    ul { margin: 0; padding-left: 5mm; }
+    li { margin: .6mm 0; }
+    .warning {
+      border: 1px solid #856404; background: #fff3cd; padding: 1.5mm 2.5mm;
+      margin: 0 0 2.5mm; font-size: 10pt;
+    }
+    .alert { border-color: #842029; background: #f8d7da; }
+    .foot { margin-top: 4mm; font-size: 8.5pt; color: #444; border-top: 1px solid #999; padding-top: 1.5mm; }
+    .no-print { margin: 0 0 3mm; padding: 2mm 4mm; cursor: pointer; }
+    @media print {
+      body { padding: 0; }
+      .no-print { display: none; }
+      .card { border: none; padding: 0; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <button class="no-print" onclick="window.print()">Print / save as PDF</button>
+
+    <h1>{{ plan.trail_name }}</h1>
+    <p class="meta">
+      {{ plan.date }} &middot; {{ plan.route_type }} &middot; group of {{ plan.group_size }}
+      &middot; all times local ({{ plan.utc_offset }})
+    </p>
+
+    {% for item in plan.warnings %}
+      <div class="warning alert"><strong>Heads up:</strong> {{ item }}</div>
+    {% endfor %}
+
+    <table>
+      <tr><th>Distance / climb</th><td>{{ plan.distance_km }} km / {{ plan.elevation_gain_m }} m</td></tr>
+      <tr><th>Walking + breaks</th><td>{{ plan.walking_time_hours }} h + {{ plan.break_minutes }} min</td></tr>
+      <tr><th>Start</th><td class="key">{{ plan.start_time }}</td></tr>
+      <tr><th>Turn back if not at {{ "far end" if plan.route_type == "out-and-back" else "halfway" }} by</th><td class="key">{{ plan.hard_turnaround_time }}</td></tr>
+      <tr><th>Planned finish</th><td>{{ plan.finish_time }} (aim to be done by {{ plan.target_finish }})</td></tr>
+      <tr><th>Sunrise / sunset</th><td>{{ plan.sunrise }} / <strong>{{ plan.sunset }}</strong></td></tr>
+      <tr><th>Latest safe start</th><td>{{ plan.latest_safe_start }}</td></tr>
+      <tr><th>Water</th><td>{{ "%g"|format(plan.water_per_person_liters) }} L per person ({{ "%g"|format(plan.water_liters) }} L total)</td></tr>
+      <tr><th>Location</th><td>{{ plan.latitude }}, {{ plan.longitude }}</td></tr>
+      <tr><th>Emergency number</th><td>{{ plan.emergency_number }}</td></tr>
+    </table>
+
+    {% if card.warning %}
+      <div class="warning"><strong>Note:</strong> {{ card.warning }}</div>
+    {% endif %}
+
+    {% for section in card.sections %}
+      <h2>{{ section.title }}</h2>
+      <ul>
+        {% for line in section.lines %}<li>{{ line }}</li>{% endfor %}
+      </ul>
+    {% endfor %}
+
+    <p class="foot">
+      The numbers above are calculated on this device (Naismith's rule, one-hour daylight buffer).
+      {% if card.source == "model" %}Advice text written by local model <em>{{ card.model }}</em> via Ollama.
+      {% else %}Advice text from the built-in template (no AI model used).{% endif %}
+      Advisory only: check conditions, carry navigation and use your judgment.
+    </p>
+  </div>
+</body>
+</html>

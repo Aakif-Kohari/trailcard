@@ -1,0 +1,5 @@
+streamlit>=1.40
+ollama>=0.4
+gpxpy>=1.6
+astral>=3.2
+Jinja2>=3.1
